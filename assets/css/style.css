@@ -1,0 +1,247 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  background: #fff;
+  padding: 15px 5%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar img {
+  height: 50px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('../images/hero-bg.png') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.btn-primary {
+  background: linear-gradient(45deg, #007BFF, #00C6FF);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0056b3, #0096c7);
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 5%;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+  background: #f4f8ff;
+  text-align: center;
+}
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+.about h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+.about-list {
+  list-style: none;
+  margin-top: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.about-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Services */
+.services p {
+  max-width: 700px;
+  margin: 10px auto 30px;
+}
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 320px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.card img {
+  height: 220px;
+  margin-bottom: 15px;
+}
+.card ul {
+  list-style: none;
+  margin-top: 10px;
+  text-align: left;
+  padding: 0;
+}
+.card ul li {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  color: #555;
+}
+/* Last card centered */
+.service-cards .card:last-child {
+  flex: 1 1 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact p {
+  max-width: 700px;
+  margin: auto;
+}
+.contact-details {
+  max-width: 600px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.contact-item .icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.contact-item p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.contact a {
+  color: #007BFF;
+  font-weight: 600;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+.map {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    padding: 10px;
+    display: none;
+  }
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

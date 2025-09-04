@@ -6,38 +6,70 @@ body {
   color: #333;
 }
 
-/* Navbar */
+/* Header */
 header {
-  background: #fff;
-  padding: 15px 5%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #f9f9f9; /* off-white for contrast */
+  padding: 20px 5%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+
+/* Navbar layout */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Logo */
 .navbar img {
-  height: 50px;
+  height: 80px; /* bigger logo */
 }
+
+/* Links container */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
+
+/* Remove bullets */
 .nav-links li {
   list-style: none;
 }
+
+/* Link styles */
 .nav-links a {
   text-decoration: none;
   font-weight: 600;
   color: #333;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
+
+/* Hover underline effect */
 .nav-links a:hover {
   color: #007BFF;
+  border-bottom: 2px solid #007BFF;
 }
+
+/* Special button for contact */
+.nav-links .contact-btn {
+  background: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+.nav-links .contact-btn:hover {
+  background: #0056b3;
+  border-bottom: none;
+}
+
 
 /* Hero Section */
 .hero {
